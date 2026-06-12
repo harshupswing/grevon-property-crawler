@@ -1,4 +1,4 @@
-xconst{QdrantClient}=require('@qdrant/js-client-rest');
+const{QdrantClient}=require('@qdrant/js-client-rest');
 const VOYAGE_MODEL='voyage-3-lite',EMBED_DIM=512,CHUNK_SIZE=400,CHUNK_OVERLAP=60;
 function getQdrant(){return new QdrantClient({url:process.env.QDRANT_URL||'http://localhost:6333'});}
 function collectionName(d){return 'grevon_'+d.replace(/[^a-z0-9]/gi,'_').toLowerCase();}
