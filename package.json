@@ -2,7 +2,10 @@
     "name": "grevon-crawler-backend",
     "version": "2.0.0",
     "main": "server.js",
-    "scripts": { "start": "node server.js" },
+        "scripts": {
+                    "start": "node server.js",
+                    "postinstall": "npx playwright install chromium --with-deps"
+        },
     "dependencies": {
           "@qdrant/js-client-rest": "^1.18.0",
           "cors": "^2.8.5",
